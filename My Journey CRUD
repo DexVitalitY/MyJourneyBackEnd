@@ -1,0 +1,36 @@
+My Journey
+
+Method 					Path
+
+GET						/journeys 											Get all journeys
+
+GET 					/users/{username}/Journeys 			Get all journeys from 1 user
+
+GET						/journeys/{id}									Get 1 journey via id	
+
+POST 					/journeys 											Creating a new journey (Req. Auth)
+
+PUT 					/journeys/{id}									Updating Journey (maybe just for message) (Req. Auth)
+
+DELETE 				/journeys/{id}									Deleting journey (Req. Auth)
+
+
+
+Sessions
+
+POST 					/sessions 											Logging In (Req. Auth)
+
+GET 					/authenticated									Authenticate Log-In 
+
+DELETE				/sessions 											Logging Out (Req. Auth)
+
+
+Users
+
+GET 					/users 													Get all users
+
+POST					/users 													Creating a new user
+
+GET 					/users/{username}								Finds a specific user
+
+DELETE				/users/{username}								Deleting user

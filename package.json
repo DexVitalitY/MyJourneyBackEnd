@@ -23,9 +23,21 @@
   "homepage": "https://github.com/DexVitalitY/MyJourneyBackEnd",
   "dependencies": {
     "bcrypt": "^0.8.2",
+    "blueimp-file-upload-node": "^2.1.0",
+    "fs-extra": "^0.18.2",
+    "gulp": "^3.8.11",
+    "gulp-data": "^1.2.0",
+    "gulp-exif": "^0.10.0",
+    "gulp-extend": "^0.2.0",
     "hapi": "^8.4.0",
     "hapi-mongodb": "^3.0.0",
     "joi": "^6.2.0",
     "yar": "^3.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-data": "^1.2.0",
+    "gulp-exif": "^0.10.0",
+    "gulp-extend": "^0.2.0"
   }
 }

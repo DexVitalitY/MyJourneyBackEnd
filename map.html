@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="js/map.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="css/map.css" rel="stylesheet">
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2Ch7jKN0OQu7ZqQnnWXVngM2tJS7_ZkI&sensor=true&libraries=drawing,visualization">
+    </script>
+
+	<title>My Journeys</title>
+</head>
+<body>
+	<div class="row">
+		<div id="user-input" class="col-xs-12 col-sm-2">My Journeys
+      <div id='input'>
+        <textarea id="journey-message" placeholder="Every Journey has a Message..."></textarea>
+        <button type='button' id='submit' class='btn btn-primary'>Log Journey</button>
+      </div>
+			<button type='button' id='delete' class='btn btn-danger'>Delete</button>
+      <div id='gps-coordinates-header'>GPS Coordinates of Pictures:</div>
+      <div id="gps-coordinates"></div>
+		</div>
+		<div id="map-canvas" class="col-xs-12 col-sm-10"></div>
+	</div>
+</body>
+</html>
