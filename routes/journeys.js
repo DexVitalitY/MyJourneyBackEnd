@@ -43,10 +43,10 @@ server.route([
 			var journey_id = encodeURIComponent(request.params.id);
 			var ObjectId = request.server.plugins['hapi-mongodb'].ObjectID;
 
-			db.collection('journeys').findOne({ "_id": ObjectId(journey_id)}, function (err, tweet) {
+			db.collection('journeys').findOne({ "_id": ObjectId(journey_id)}, function (err, journey) {
 				if (err) {return reply('Internal MongoDB error', err); }
 
-				reply(tweet);
+				reply(journey);
 			})
 		} 		
 	},
@@ -67,7 +67,8 @@ server.route([
 						"journey": request.payload.journey.coordinates,
 					  "user_id": ObjectId(session.user_id)
 					};
-					
+					console.log('------------------------');
+					console.log(journey);
 					db.collection('journeys').insert(journey, function(err, writeResult) {
 				  	if (err) { return reply('Internal MongoDB error', err); }
 
@@ -83,7 +84,7 @@ server.route([
         journey: {
         	name: Joi.string().max(20).required(),
           message: Joi.string().max(300).required(),
-          coordinates: Joi.string().required()
+          coordinates: Joi.required()
         }
       }
     }
